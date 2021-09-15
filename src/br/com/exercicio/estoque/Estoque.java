@@ -8,7 +8,7 @@ public class Estoque {
 
 	static ArrayList<SuperProdutos> arrayP = new ArrayList<>();
 
-	public static void main(String[] args) {
+	public void estoque() {
 		Scanner entrada = new Scanner(System.in);
 		// ArrayList<SuperProdutos> arrayP = new ArrayList<>();
 
@@ -25,13 +25,12 @@ public class Estoque {
 		arrayP.add(new SuperProdutos("Açucar", "12/12/2021", 15, 9542));
 		arrayP.add(new SuperProdutos("Arroz", "16/06/2022", 25, 1235));
 
-		System.out.println("Muito bem vindo ao Sistema do Super Mercado.");
-		System.out.println("______________________________________________\n");
-
+		System.out.println("\n___________________________________________________________");
 		System.out.println("Quer adicionar ou remover produtos?" + "\n[1] Adicionar" + "\n[2] Remover");
 		opcao = entrada.nextInt();
 		if (opcao == 1) {
-			System.out.println("\n______________________________________________\n");
+			System.out.println("\n_________________________________________________________\n");
+
 			// System.out.println("Quantos produtos diferentes você quer cadastrar?");
 			// quantosP = entrada.nextInt();
 
@@ -55,13 +54,13 @@ public class Estoque {
 																					// adicionado os dados do produto ao
 																					// array
 
-				System.out.println("\n______________________________________________\n");
+				System.out.println("\n_________________________________________________________\n");
 
 				System.out
 						.println("Deseja fazer alguma alteração nos produtos existentes?" + "\n[1] sim" + "\n[2] não");
 				opcao = entrada.nextInt();
 				if (opcao == 1) {
-					System.out.println("\n______________________________________________\n");
+					System.out.println("\n_________________________________________________________\n");
 					for (SuperProdutos i1 : arrayP) {
 						System.out.println("[" + (i2 + 1) + "] " + i1);
 						i2++;
@@ -72,7 +71,7 @@ public class Estoque {
 					remover = entrada.nextInt();
 					switch (remover) {
 					case 1:
-						System.out.println("\n______________________________________________\n");
+						System.out.println("\n_________________________________________________________\n");
 						i2++;
 						arrayP.remove(0);
 						for (SuperProdutos i1 : arrayP) {
@@ -83,7 +82,7 @@ public class Estoque {
 						break;
 
 					case 2:
-						System.out.println("\n______________________________________________\n");
+						System.out.println("\n_________________________________________________________\n");
 						i2++;
 						arrayP.remove(1); // remove o produto na posição 1 do ArrayList
 						for (SuperProdutos i1 : arrayP) {
@@ -94,7 +93,7 @@ public class Estoque {
 						break;
 
 					case 3:
-						System.out.println("\n______________________________________________\n");
+						System.out.println("\n_________________________________________________________\n");
 						i2++;
 						arrayP.remove(2); // remove o produto na posição 2 do ArrayList
 						for (SuperProdutos i1 : arrayP) {
@@ -105,10 +104,10 @@ public class Estoque {
 					}
 
 				} else if (opcao == 2) {
-					System.out.println("\n______________________________________________\n");
+					System.out.println("\n_________________________________________________________\n");
 					System.out.println("Sistema encerrado.");
 				} else {
-					System.out.println("\n______________________________________________\n");
+					System.out.println("\n_________________________________________________________\n");
 					System.out.println("Opção inválida.");
 
 				}
